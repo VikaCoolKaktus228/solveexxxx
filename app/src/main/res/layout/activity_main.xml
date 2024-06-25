@@ -8,11 +8,11 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="403dp"
+        android:layout_width="387dp"
         android:layout_height="69dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="52dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="10dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -22,7 +22,7 @@
         <TextView
             android:id="@+id/fOperand"
             android:layout_width="wrap_content"
-            android:layout_height="57dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="monospace"
             android:text="00"
@@ -32,7 +32,7 @@
         <TextView
             android:id="@+id/Operation"
             android:layout_width="wrap_content"
-            android:layout_height="58dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="monospace"
             android:text="+"
@@ -42,7 +42,7 @@
         <TextView
             android:id="@+id/sOperand"
             android:layout_width="wrap_content"
-            android:layout_height="56dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="monospace"
             android:text="00"
@@ -52,52 +52,57 @@
         <TextView
             android:id="@+id/Equals"
             android:layout_width="wrap_content"
-            android:layout_height="56dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="monospace"
             android:text="="
             android:textAlignment="center"
             android:textSize="34sp" />
 
-        <TextView
-            android:id="@+id/Value"
-            android:layout_width="wrap_content"
-            android:layout_height="58dp"
+        <EditText
+            android:id="@+id/answerEditText"
+            android:layout_width="29dp"
+            android:layout_height="56dp"
             android:layout_weight="1"
-            android:fontFamily="monospace"
-            android:text="00"
-            android:textAlignment="center"
-            android:textSize="34sp" />
+            android:hint="@string/lka"
+
+            android:editable="true"
+            android:ems="10"
+            android:inputType="number" />
+
     </LinearLayout>
 
     <Button
         android:id="@+id/Startbtn"
-        android:layout_width="396dp"
-        android:layout_height="48dp"
+        android:layout_width="278dp"
+        android:layout_height="53dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="7dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#4A58A0"
         android:text="старт"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Checkbtn"
-        android:layout_width="400dp"
-        android:layout_height="48dp"
+        android:layout_width="205dp"
+        android:layout_height="52dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="58dp"
+        android:backgroundTint="#5DD148"
         android:text="проверка"
+        android:textColorLink="#ADF6FF"
         app:layout_constraintBottom_toTopOf="@+id/Startbtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.441" />
 
     <TextView
         android:id="@+id/textView6"
@@ -107,26 +112,33 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="54dp"
         android:fontFamily="monospace"
+        android:foregroundTint="#FF8080"
         android:text="Итого решено примеров"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Allrightexamples"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="34dp"
         android:layout_marginStart="201dp"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="197dp"
         android:layout_marginBottom="9dp"
         android:text="0"
+        android:textAlignment="center"
         android:textSize="24sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="1.0" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -142,7 +154,7 @@
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="monospace"
